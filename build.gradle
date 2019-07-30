@@ -45,6 +45,10 @@ allprojects {
         buildDir = "${externalBuildDir}/${project.name}"
     }
     group = 'com.google.android.exoplayer'
+    
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    }
 }
 
 apply from: 'javadoc_combined.gradle'
