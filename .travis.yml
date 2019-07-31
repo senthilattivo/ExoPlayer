@@ -34,8 +34,15 @@ android:
     - 'android-sdk-preview-license-52d11cd2'
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
-
-install: travis_wait 30 mvn install
-
+    
 env:
   - ANDROID_TARGET=android-28  ANDROID_ABI=armeabi-v7a
+
+# Emulator Management: Create, Start and Wait
+before_script:
+  - echo no | android create avd --force -n test -t android-28 --abi armeabi-v7a
+  - emulator -avd test -no-skin -no-audio -no-window &
+  - curl http://is.gd/android_wait_for_emulator > android-wait-for-emulator
+  - chmod u+x android-wait-for-emulator
+  - ./android-wait-for-emulator
+  - adb shell input keyevent 82 &
