@@ -4,6 +4,8 @@ language: android
 
 dist: trusty
 
+install: travis_wait 30 mvn install
+
 android:
   components:
     # Uncomment the lines below if you want to
@@ -29,4 +31,4 @@ android:
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
     
-   install: travis_wait 30 mvn install
+   
