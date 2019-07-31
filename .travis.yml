@@ -42,7 +42,7 @@ android:
 before_script:
   - android list targets
   - echo no | android create avd --force -n test -t android-$ANDROID_API_LEVEL --abi $ANDROID_ABI
-  - emulator -avd test -WVGA800 -no-audio -no-window &
+  - emulator -avd test -no-skin -no-audio -no-window &
   - curl http://is.gd/android_wait_for_emulator > android-wait-for-emulator
   - chmod u+x android-wait-for-emulator
   - ./android-wait-for-emulator
