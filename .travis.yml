@@ -9,7 +9,7 @@ env:
     - ANDROID_API_LEVEL=28
     - ANDROID_BUILD_TOOLS_VERSION=28.0.3
     - ANDROID_ABI=x86
-    - EMULATOR_VERSION=18
+    - EMULATOR_VERSION=26
 
 android:
   components:
@@ -41,7 +41,7 @@ android:
     
 # Emulator Management: Create, Start and Wait
 before_script:
-  - echo android list targets
+  - android list targets
   - echo no | android create avd --force -n test -t android-$EMULATOR_VERSION --abi google_apis/$ANDROID_ABI
   - emulator -avd test -no-skin -no-audio -no-window &
   - curl http://is.gd/android_wait_for_emulator > android-wait-for-emulator
