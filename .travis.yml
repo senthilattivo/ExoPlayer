@@ -35,5 +35,7 @@ android:
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
 
+install: travis_wait 30 mvn install
+
 env:
   - ANDROID_TARGET=android-28  ANDROID_ABI=armeabi-v7a
