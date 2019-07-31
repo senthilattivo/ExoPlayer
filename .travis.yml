@@ -19,9 +19,8 @@ android:
 
     # The BuildTools version used by your project
     - build-tools-28.0.3
-
     # The SDK version used to compile your project
-    - $ANDROID_TARGET
+    - android-28
     
     - add-on
     - extra
@@ -43,7 +42,7 @@ android:
     
 # Emulator Management: Create, Start and Wait
 before_script:
-  - echo no | android create avd --force -n test -t android-28 --abi armeabi-v7a
+  - echo no | android create avd --force -n test -t android-28 --abi ANDROID_ABI
   - emulator -avd test -no-skin -no-audio -no-window &
   - curl http://is.gd/android_wait_for_emulator > android-wait-for-emulator
   - chmod u+x android-wait-for-emulator
