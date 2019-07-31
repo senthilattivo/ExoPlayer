@@ -28,3 +28,5 @@ android:
     - 'android-sdk-preview-license-52d11cd2'
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
+    
+   install: travis_wait 30 mvn install
