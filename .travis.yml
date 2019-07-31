@@ -41,7 +41,7 @@ android:
     
 # Emulator Management: Create, Start and Wait
 before_script:
-  - android list targets
+  - echo android list targets
   - echo no | android create avd --force -n test -t android-$EMULATOR_VERSION --abi google_apis/$ANDROID_ABI
   - emulator -avd test -no-skin -no-audio -no-window &
   - curl http://is.gd/android_wait_for_emulator > android-wait-for-emulator
