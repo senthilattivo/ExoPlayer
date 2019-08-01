@@ -13,7 +13,6 @@ android:
   - android-28
   - android-$ANDROID_API_LEVEL
   - add-on
-  # extra parameter
   - extra
   - extra-google-google_play_services
   - extra-google-m2repository
