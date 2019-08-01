@@ -2,7 +2,7 @@ language: android
 jdk: oraclejdk8
 env:
   global:
-    - ANDROID_TARGET=android-22
+    - ANDROID_TARGET=android-28
     - ANDROID_ABI=armeabi-v7a
 android:
   components:
@@ -10,6 +10,11 @@ android:
   - platform-tools
   - build-tools-28.0.3
   - android-28
+  - android-$ANDROID_API_LEVEL
+  - add-on
+  - extra
+  - extra-google-google_play_services
+  - extra-google-m2repository
   - extra-android-m2repository
   - $ANDROID_TARGET
   - sys-img-${ANDROID_ABI}-${ANDROID_TARGET}
@@ -20,5 +25,10 @@ script:
   - android-wait-for-emulator
   - adb shell setprop dalvik.vm.dexopt-flags v=n,o=v
   - ./gradlew connectedCheck
+ licenses:
+   - 'android-sdk-preview-license-52d11cd2'
+   - 'android-sdk-license-.+'
+   - 'google-gdk-license-.+'
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  
