@@ -22,6 +22,7 @@ buildscript {
         classpath 'com.google.android.gms:strict-version-matcher-plugin:1.1.0'
         testImplementation 'junit:junit:4.12'
         androidTestImplementation 'androidx.test:runner:1.2.0'
+        androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     }
     // Workaround for the following test coverage issue. Remove when fixed:
     // https://code.google.com/p/android/issues/detail?id=226070
