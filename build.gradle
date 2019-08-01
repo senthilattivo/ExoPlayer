@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+apply plugin: 'com.google.android.exoplayer2'
 buildscript {
     repositories {
         google()
@@ -20,9 +21,9 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.4.2'
         classpath 'com.novoda:bintray-release:0.9'
         classpath 'com.google.android.gms:strict-version-matcher-plugin:1.1.0'
-        testİmplementation  'junit:junit:4.12'
-        androidTestİmplementation  'androidx.test:runner:1.1.1'
-        androidTestİmplementation  'androidx.test.espresso:espresso-core:3.1.1'
+        testImplementation 'junit:junit:4.12'
+        androidTestImplementation 'com.android.support.test:runner:1.0.2'
+        androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     }
     // Workaround for the following test coverage issue. Remove when fixed:
     // https://code.google.com/p/android/issues/detail?id=226070
