@@ -19,10 +19,11 @@
     package="com.google.android.exoplayer2.ext.flac.test">
 
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-     <uses-library android:name="android.test.base"
-              android:required="false" />
-     <uses-library android:name="android.test.mock"
-              android:required="false" />
+     
+     
+     <uses-library android:name="android.test.runner"/>
+     <uses-library android:name="android.test.base" />
+     <uses-library android:name="android.test.mock"/>
 
   <uses-sdk/>
 
