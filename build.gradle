@@ -21,9 +21,10 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.4.2'
         classpath 'com.novoda:bintray-release:0.9'
         classpath 'com.google.android.gms:strict-version-matcher-plugin:1.1.0'
-        testImplementation 'junit:junit:4.12'
-        androidTestImplementation 'com.android.support.test:runner:1.0.2'
-        androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+        testİmplementation 'junit:junit:4.12'
+        androidTestİmplementation 'com.android.support.test:runner:1.0.2'
+        androidTestİmplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
     }
     // Workaround for the following test coverage issue. Remove when fixed:
     // https://code.google.com/p/android/issues/detail?id=226070
