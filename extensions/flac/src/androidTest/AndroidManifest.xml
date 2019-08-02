@@ -19,6 +19,8 @@
     package="com.google.android.exoplayer2.ext.flac.test">
 
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+
   <uses-sdk/>
 
   <application android:debuggable="true"
